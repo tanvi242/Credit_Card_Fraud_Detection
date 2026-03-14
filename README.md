@@ -1,101 +1,23 @@
-Credit Card Fraud Detection using Machine Learning
-Project Overview
+💳 Credit Card Fraud Detection
+📌 Project Overview
 
-This project focuses on detecting fraudulent credit card transactions using machine learning techniques. Fraud detection is crucial for financial institutions to prevent financial losses and identify suspicious activities in real time.
+This project implements a machine learning-based system to detect fraudulent credit card transactions. Fraud detection is a critical problem for financial institutions, as unauthorized transactions can lead to significant financial losses.
 
-The goal of this project is to build a machine learning model that can classify transactions as fraudulent or legitimate based on transaction features.
+The goal of this project is to analyze transaction data and build a model that can accurately classify transactions as fraudulent or legitimate using machine learning algorithms.
 
-Dataset
+📊 Dataset
 
-The dataset contains information about credit card transactions including details such as transaction amount, type, and location.
+The dataset contains information about credit card transactions including transaction details such as amount, type, location, and fraud label.
 
-Features in the dataset include:
+Target variable
 
-TransactionID
-
-TransactionDate
-
-Amount
-
-MerchantID
-
-TransactionType
-
-Location
-
-IsFraud (Target variable)
-
-Where:
-
+IsFraud
 0 → Legitimate transaction
-
 1 → Fraudulent transaction
 
-Project Workflow
-1. Data Preprocessing
+Fraud detection datasets are typically highly imbalanced, meaning fraudulent transactions are much fewer compared to legitimate ones, making the classification task challenging.
 
-Loading dataset using Pandas
-
-Handling missing values
-
-Dropping irrelevant columns
-
-Encoding categorical variables
-
-2. Exploratory Data Analysis (EDA)
-
-Fraud vs Normal transaction distribution
-
-Data visualization using Seaborn and Matplotlib
-
-3. Handling Imbalanced Data
-
-Fraud detection datasets often have very few fraud cases compared to normal transactions.
-
-To solve this issue, SMOTE (Synthetic Minority Over-sampling Technique) was used to balance the dataset.
-
-4. Machine Learning Models Used
-Logistic Regression
-
-Used as a baseline model for classification.
-
-Random Forest Classifier
-
-An ensemble learning method that combines multiple decision trees to improve prediction performance.
-
-5. Model Evaluation
-
-The model performance was evaluated using:
-
-Accuracy
-
-Precision
-
-Recall
-
-F1 Score
-
-Confusion Matrix
-
-ROC Curve
-
-AUC Score
-
-These metrics help measure how effectively the model detects fraudulent transactions.
-
-Visualization
-
-The project includes several visualizations to understand the data and model performance:
-
-Fraud vs Legitimate transaction distribution
-
-Confusion matrix heatmap
-
-ROC Curve
-
-Feature importance plot
-
-Technologies Used
+⚙️ Technologies Used
 
 Python
 
@@ -113,38 +35,82 @@ Imbalanced-learn (SMOTE)
 
 Joblib
 
-Project Structure
-Credit-Card-Fraud-Detection
-│
-├── Credit_card_fraud_detection.ipynb
-├── fraud_detection_model.pkl
-├── dataset.csv
-└── README.md
-Model Saving
+🔎 Project Workflow
+1️⃣ Data Preprocessing
 
-The trained model was saved using Joblib so it can be reused later in applications such as:
+Loading dataset
 
-Fraud detection APIs
+Handling missing values
 
-Web applications
+Dropping irrelevant columns
 
-Real-time monitoring systems
+Encoding categorical variables
 
-Future Improvements
+2️⃣ Exploratory Data Analysis
+
+Fraud vs normal transaction distribution
+
+Visualizing transaction patterns
+
+3️⃣ Handling Imbalanced Data
+
+To improve model performance on fraud cases, SMOTE (Synthetic Minority Over-sampling Technique) was applied to balance the dataset.
+
+4️⃣ Model Training
+
+Two machine learning models were used:
+
+Logistic Regression – baseline classification model
+
+Random Forest Classifier – ensemble model for improved prediction performance
+
+5️⃣ Model Evaluation
+
+Model performance was evaluated using:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1 Score
+
+Confusion Matrix
+
+ROC Curve
+
+Feature Importance
+
+📈 Results
+
+The trained model learns patterns in transaction data and identifies suspicious transactions that may indicate fraudulent activity.
+
+Key evaluation methods used:
+
+Confusion Matrix visualization
+
+ROC curve analysis
+
+Feature importance analysis
+
+💾 Model Saving
+
+The trained model was saved using Joblib so it can be reused later in applications such as fraud detection systems or APIs.
+
+🚀 Future Improvements
+
+Possible improvements for this project include:
 
 Hyperparameter tuning
 
-Testing additional models (XGBoost, Gradient Boosting)
+Using advanced models (XGBoost, LightGBM)
 
-Building a real-time fraud detection dashboard
+Building a real-time fraud detection API
 
-Deploying the model using Flask or Streamlit
+Deploying the model with Flask or Streamlit
 
-Conclusion
-
-This project demonstrates how machine learning can be used to detect fraudulent financial transactions. By analyzing transaction patterns, the model can help identify suspicious activities and assist financial institutions in improving transaction security.
-
-Author
+👩‍💻 Author
 
 Tanvi Jitendra Bhosale
-BCA Student | AI & Cloud Enthusiast | Machine Learning Projects
+BCA Student | Machine Learning & AI Enthusiast
